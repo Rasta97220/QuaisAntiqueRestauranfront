@@ -3,26 +3,44 @@
         <h1>Vos réservations</h1>   
     </div>
 </div>
-<div class="container text-center pb-3">
-<a href="/reserver" class="btn btn-primary">Réserver</a>
+<div class="container mt-5">
+    <h2>Mes Réservations</h2>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Réservation pour le 27 mars 2025 à 19:30
+            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#cancelReservationModal">Annuler</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Réservation pour le 28 mars 2025 à 12:00
+            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#cancelReservationModal">Annuler</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Réservation pour le 29 mars 2025 à 12:00
+            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#cancelReservationModal">Annuler</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Réservation pour le 30 mars 2025 à 13:00
+            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#cancelReservationModal">Annuler</button>
+        </li>
+    </ul>
 </div>
-<div class="container text-center allreservations">
-<a href="#">
-    <span>26/03/2025</span>
-    <span>12:29</span>
-    <span>5 personnes</span>
-    <span>Pas d'allergie</span>
-</a>
-<a href="#">
-    <span>26/03/2025</span>
-    <span>12:29</span>
-    <span>5 personnes</span>
-    <span>Pas d'allergie</span>
-</a>
-<a href="#">
-    <span>26/03/2025</span>
-    <span>12:29</span>
-    <span>5 personnes</span>
-    <span>Pas d'allergie</span>
-</a>
+
+<!-- Modal de confirmation d'annulation -->
+<div class="modal fade" id="cancelReservationModal" tabindex="-1" aria-labelledby="cancelReservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cancelReservationModalLabel">Confirmer l'annulation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Êtes-vous sûr de vouloir annuler cette réservation ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non</button>
+                <button type="button" class="btn btn-danger" id="confirmCancel">Oui, annuler</button>
+            </div>
+        </div>
+    </div>
 </div>
+
